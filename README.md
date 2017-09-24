@@ -3,8 +3,8 @@
 About
 The problem [see here](https://open.kattis.com/problems/phonelist)
 * Javascript
-* Atention to Memory Limit
-* Atention to time Limit
+* Attention to Memory Limit
+* Attention to time Limit
 * To resolve performance I could not use new commands like map, reduce or sort (they are too slow) 
 * Use massive of console.time to inspect performance
 
