@@ -13,11 +13,11 @@ The problem [see here](https://open.kattis.com/problems/phonelist)
 - [Node](https://nodejs.org) `6.x` or newer
 - [Chrome](https://www.google.com.br/chrome/browser/desktop/index.html) to dev environment
 - [Git](https://git-scm.com/downloads) to download this project
-* Using NodeJs [Kattis.Runner](https://github.com/csvn/kattis.runner)
+- Using NodeJs [Kattis.Runner](https://github.com/csvn/kattis.runner)
 
 
 ## The code
-- Click [here] to see the code 
+- Click [here](https://github.com/hernanif1/kattis/blob/master/solution/solution.js) to see the code 
 
 
 ----------------------
