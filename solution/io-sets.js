@@ -1,21 +1,46 @@
 module.exports = {
   input: [
     [
-      'input set 1, line 1',
-      'input set 1, line 2',
-      'input set 1, line 3'
-    ], [
-      'input set 2, line 1',
-      'input set 2, line 2'
-    ], [
-      'input set 3, line 1'
+      '6',
+      '5', // YES
+      '113',
+      '123401',
+      '123440',
+      '12345',
+      '98346',
+      '3', // NO
+      '911',
+      '97625999',
+      '91125426',
+      '4', // NO
+      '0911',
+      '097625999',
+      '091225426',
+      '0912',
+      '5', // YES
+      '113',
+      '12340',
+      '123440',
+      '12345',
+      '98346',
+      '6', // YES
+      '113',
+      '12340',
+      '123440',
+      '12345',
+      '9123458258',
+      '9123458258',
+      '4', // YES
+      '98125',
+      '8885',
+      '0888',
+      '881'
+
     ]
   ],
 
   // If output is not a string, it will not be compared
   output: [
-    'output1',
-    'output2',
-    null
+    'YES\nNO\nNO\nYES\nYES\nYES'
   ]
 };
