@@ -3,28 +3,72 @@
   "version": "1.0.0",
   "description": "Kattis javascript helper",
   "main": "src/main.js",
+  "scripts": {
+    "start": "gulp run",
+    "precommit": "npm run git-hook",
+    "prepush": "npm run git-hook",
+    "git-hook": "npm run lint -s && npm run test -s",
+    "lint": "standard --verbose | snazzy",
+    "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | xargs standard | snazzy",
+    "fixcode": "standard --fix"
+  },
   "author": "christian.svensson.89@gmail.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/csvn/kattis.runner.git"
   },
+  "engines": {
+    "node": "8.8.1",
+    "npm": "5.5.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "describe",
+      "it",
+      "test",
+      "requestAnimationFrame"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "exclude": [
+      "packages/**/*"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "all": false
+  },
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "babelify": "^6.4.0",
     "browser-sync": "^2.9.11",
     "browserify": "^11.2.0",
     "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
+    "husky": "^0.14.3",
     "jade": "^1.11.0",
     "jadeify": "^4.4.0",
+    "nyc": "^11.2.1",
     "run-sequence": "^1.1.4",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.5.0",
-    "babel-preset-es2015": "^6.24.1",
-    "gulp-babel": "^6.1.2"
+    "watchify": "^3.5.0"
   }
 }
